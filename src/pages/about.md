@@ -2,35 +2,10 @@
 layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
+I’m a software engineer with a passion for diving headfirst into the madness of programming 💻. My main weapons of choice are Zig, Golang, and Python 🐍, though I’m also stuck wrangling databases like MySQL and PostgreSQL 🗄️, dabbling with Redis 🔴, and dealing with the many joys of AWS services ☁️ (because why not add cloud chaos to the mix?).
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+When I’m not elbow-deep in code 👨‍💻, you can usually find me obsessing over lower-level computer science concepts, because apparently, I enjoy learning how things really break under the hood 🔧🤯.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+Outside of the tech world, I like to get my hands dirty—literally—with my diesel trucks 🚚🔩. There's something satisfying about fixing a machine that doesn’t give you cryptic error messages ❌. It’s a nice change of pace from debugging code that insists on betraying you 😤.
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
-
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
-
-## Tech Stack
-
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
-
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+This blog is where I vent about my latest coding frustrations, share what I’ve learned 📚, and maybe provide some helpful advice along the way. Stick around if you want to hear about the ups and downs of life as a software engineer (and probably a few truck repair stories too) 🚀🔧.
