@@ -1,6 +1,6 @@
 ---
 author: dbubel
-pubDatetime: 2024-09-18T15:22:00Z
+pubDatetime: 2024-10-04T15:22:00Z
 title: Adding Dependencies from GitHub in Zig
 slug: zig-adding-github-dependency
 featured: false
