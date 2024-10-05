@@ -1,35 +1,37 @@
 ---
 author: dbubel
 pubDatetime: 2024-09-18T15:22:00Z
-title: Adding dependencies from github
+title: Adding Dependencies from GitHub in Zig
 slug: zig-adding-github-dependency
 featured: false
 draft: false
 tags:
   - zig
   - build-system
-description: Adding a dependency to your zig project from github
+description: A guide on how to add a dependency to your Zig project from GitHub.
 ---
 
-## Adding a dependency from Github
+## Adding a Dependency from GitHub
 
-Zig documentation is lack luster at best. I spent far too long figuring out how to simply add a logging package to my toy applicaton. The verion of Zig that I did this with was `0.14.0-dev.1702+26d35cc11`.
+Zig’s documentation can be somewhat limited, and I found myself spending more time than expected figuring out how to add a logging package to my project. The Zig version used in this example is `0.14.0-dev.1702+26d35cc11`.
 
-## Zig fetch
+### Zig Fetch
+
+You can use the `zig fetch` command to add dependencies from GitHub. For example:
 
 ```bash
 zig fetch --save https://github.com/karlseguin/log.zig/archive/refs/heads/master.tar.gz
 ```
 
-The important thing to note here is the end of the url `heads/master.tar.gz` denotes which package archive that your package will be using. You can specify different paths based on which branch, or release that you want to include in your build.
+The key part of the URL is `heads/master.tar.gz`, which specifies the branch or package archive you want to use. You can adjust this URL to target a different branch or release version of the package.
 
-So for example if you wanted to pull a specific release you would do
+For instance, to pull a specific release, you would use:
 
 ```bash
-zig fetch --save https://github.com/karlseguin/archive/refs/tags/v1.1.1.tar.gz
+zig fetch --save https://github.com/karlseguin/log.zig/archive/refs/tags/v1.1.1.tar.gz
 ```
 
-The above command should modify your `build.zig.zon` to look similar to this
+After running the command, your `build.zig.zon` file will be updated. It should look something like this:
 
 ```zig
 .{
@@ -47,12 +49,11 @@ The above command should modify your `build.zig.zon` to look similar to this
         "src",
     },
 }
-
 ```
 
-## Build.zig
+### Modifying `build.zig`
 
-To add the dependency to your `build.zig` file you can do the following.
+To integrate the logging dependency into your project, add the following to your `build.zig` file:
 
 ```zig
 ...
@@ -69,9 +70,9 @@ exe.root_module.addImport("logz", logger.module("logz"));
 ...
 ```
 
-## Usage
+### Usage
 
-You should now be able to import the module in your application like this
+After adding the dependency, you can now import and use the `logz` module in your application as shown below:
 
 ```zig
 const std = @import("std");
@@ -95,4 +96,10 @@ pub fn main() !void {
 ...
 ```
 
-And run your program via `zig build run`
+Finally, run your application using:
+
+```bash
+zig build run
+```
+
+This setup allows you to successfully integrate a GitHub-hosted Zig package into your project and use it in your application.
