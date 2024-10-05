@@ -1,14 +1,14 @@
 ---
 author: dbubel
-pubDatetime: 2024-09-29
-title: 
+pubDatetime: 2024-09-18T15:22:00Z
+title: programming the hardware
 slug: programming-the-hard-way
 featured: false 
 draft: true
 tags:
     - programming
 description:
-With the rise of AI assisted coding companions and tools we loose the essense of computing and what it means to be a programmer.
+    With the rise of AI assisted coding companions and tools we loose the essense of computing and what it means to be a programmer.
 ---
 
 ## The good
