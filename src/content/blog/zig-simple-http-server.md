@@ -15,7 +15,7 @@ description: A simple http server using the Zig standard library to handle concu
 
 ## Zig `std.http.Server`
 
-The Zig standard library is under active development. This example uses version 0.14.0-dev.1702+26d35cc11, but be aware that the API is subject to constant change.
+The Zig standard library is under active development. This example uses version `0.14.0-dev.1702+26d35cc11`, but be aware that the API is subject to constant change. This example uses only the standard library. There are other ways (more performant ways) to write HTTP servers, but this focuses on simplicity and staying within the standard lib. If you are interested in  ff
 
 The example below implements a very light wrapper around the std.http package, featuring init and run functions. The simple server demonstrates basic operations you might perform when handling HTTP requests, such as:
 
