@@ -1,6 +1,6 @@
 ---
 author: dbubel
-pubDatetime: 2024-10-11T12:10:22:00Z
+pubDatetime: 2024-10-11T15:22:00Z
 title: HTTP Server in Zig
 slug: http-server-zig
 featured: false
