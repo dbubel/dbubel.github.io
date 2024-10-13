@@ -34,13 +34,23 @@ const socialImageURL = new URL(
   Astro.url.origin
 ).href;
 
+// Utility function to format a date as MM-DD-YYYY
+function formatDateToMMDDYYYY(date) {
+  if (!date) return null; // Handle potential null or undefined values
+  const d = new Date(date);
+  const month = String(d.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+  const day = String(d.getDate()).padStart(2, "0");
+  const year = d.getFullYear();
+  return `${month}-${day}-${year}`;
+}
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline: `${title}`,
   image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+  datePublished: `${formatDateToMMDDYYYY(pubDatetime)}`,
+  ...(modDatetime && { dateModified: formatDateToMMDDYYYY(modDatetime) }),
   author: [
     {
       "@type": "Person",
