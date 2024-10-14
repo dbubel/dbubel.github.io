@@ -1,7 +1,7 @@
 ---
 author: dbubel
 pubDatetime: 2024-10-05T15:22:00Z
-title: Stream read file
+title: Stream read file in Zig
 slug: read-file-streaming
 featured: false
 draft: false
@@ -100,4 +100,4 @@ pub fn main() !void {
 
 ## Conclusion
 
-As you can see there is a slight gain in performance with using a fixed size buffer. The file i used to test was 1.1gb in size. 
+As you can see there is a slight gain in performance with using a fixed size buffer. The file i used to test was 1.1gb in size.
