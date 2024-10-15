@@ -6,9 +6,9 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
-import Socials from "@components/Socials.astro";
+// import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
-import { SITE, SOCIALS } from "@config";
+import { SITE } from "@config";
 
 const posts = await getCollection("blog");
 
@@ -16,26 +16,23 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
-const socialCount = SOCIALS.filter(social => social.active).length;
+// const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
 <Layout>
   <Header />
   <main id="main-content">
-    <section id="hero">
-      <p>
-Documenting my projects that I do in my free time.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
-    </section>
+    <!-- <section id="hero"> -->
+    <!--   { -->
+    <!--     // only display if at least one social link is enabled -->
+    <!--     socialCount > 0 && ( -->
+    <!--       <div class="social-wrapper"> -->
+    <!--         <div class="social-links">Social Links:</div> -->
+    <!--         <Socials /> -->
+    <!--       </div> -->
+    <!--     ) -->
+    <!--   } -->
+    <!-- </section> -->
 
     <Hr />
 
@@ -62,7 +59,6 @@ Documenting my projects that I do in my free time.
     {
       recentPosts.length > 0 && (
         <section id="recent-posts">
-          <h2>Recent Posts</h2>
           <ul>
             {recentPosts.map(
               ({ data, slug }, index) =>
