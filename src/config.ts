@@ -44,12 +44,12 @@ export const SOCIALS: SocialObjects = [
   //   linkTitle: `${SITE.title} on Instagram`,
   //   active: true,
   // },
-  // {
-  //   name: "LinkedIn",
-  //   href: "https://github.com/satnaing/astro-paper",
-  //   linkTitle: `${SITE.title} on LinkedIn`,
-  //   active: true,
-  // },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/dean-bubel/",
+    linkTitle: `${SITE.title} on LinkedIn`,
+    active: true,
+  },
   // {
   //   name: "Mail",
   //   href: "mailto:yourmail@gmail.com",
