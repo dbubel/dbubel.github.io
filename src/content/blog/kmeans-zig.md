@@ -4,27 +4,23 @@ pubDatetime: 2024-09-18T15:22:00Z
 title: K-means clustering in Zig
 slug: k-means-clustering-zig
 featured: false
-draft: false
+draft: true 
 tags:
   - k-means
 description: Zig implementation of k-means clustering.
 ---
+
 # k-Means overview
+
 - **Definition**:
-	- k-Means Clustering is a popular unsupervised machine learning algorithm used for partitioning a dataset into k distinct, non-overlapping clusters.
+  - k-Means Clustering is a popular unsupervised machine learning algorithm used for partitioning a dataset into k distinct, non-overlapping clusters.
 
 - **Key Concepts**:
-    - **Centroids**: Each cluster is represented by its center point, called a centroid.
-    - **Iterations**: The algorithm iteratively refines the location of the centroids until the "mean" position changes less than a defined constant Epsilon (E).
-    - Massively sensitive to which centroids are chosen initially
+  - **Centroids**: Each cluster is represented by its center point, called a centroid.
+  - **Iterations**: The algorithm iteratively refines the location of the centroids until the "mean" position changes less than a defined constant Epsilon (E).
+  - Massively sensitive to which centroids are chosen initially
 
-# Applications
-- Customer segmentation*
-- Image compression
-- Document clustering
-
-
-
+# Pseudo algoritm
 ```
 Dataset D = [(1, 2), (3, 4), (5, 6), (8, 8)]
 Number of clusters K = 2
@@ -52,44 +48,3 @@ Number of clusters K = 2
    - Repeat the assignment and update steps with the new centroids until convergence.
 ```
 
-
-
-# Customer Segmentation
-- Task
-	- Divide a customer base into distinct groups with similar characteristics to tailor marketing strategies and improve customer satisfaction.
-- Benefits
-	- **Personalized Marketing**: Target specific segments with tailored campaigns and promotions.
-	- **Product Recommendations**: Suggest products based on the preferences of each customer segment.
-	- **Customer Retention**: Identify at-risk segments and develop strategies to retain them.
-	- **Resource Allocation**: Allocate marketing resources more effectively by focusing on high-value segments.
-
-
-# Very simple example
-- **Original Data**:
-    - Customer 1: Age=30, Spending Habits=500, Purchase Frequency=10, Customer Type='VIP'
-    - Customer 2: Age=25, Spending Habits=300, Purchase Frequency=15, Customer Type='new'
-- **Normalized and Encoded Data**:
-    - Customer 1: Age=0.6, Spending Habits=0.8, Purchase Frequency=0.4, Customer Type='VIP' -> [0.6, 0.8, 0.4, 0, 0, 1]
-    - Customer 2: Age=0.5, Spending Habits=0.5, Purchase Frequency=0.6, Customer Type='new' -> [0.5, 0.5, 0.6, 1, 0, 0]
-
-
-
-
-
-
-# Language Overview
-- **Go**
-    - **Type**: Statically typed, compiled
-    - **Key Features**: Concurrency support, performance, simplicity
-    - **Use Cases**: Web servers, distributed systems
-    - GC
-- **Python**
-    - **Type**: High-level, interpreted
-    - **Key Features**: Readability, extensive libraries, flexibility
-    - **Use Cases**: Data science, machine learning, web development
-    - GC
-- **Zig**
-    - **Type**: Low-level, compiled
-    - **Key Features**: Performance, safety, control
-    - **Use Cases**: Systems programming, embedded systems
-    - No GC 
