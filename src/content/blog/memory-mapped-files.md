@@ -1,3 +1,17 @@
+---
+author: dbubel
+pubDatetime: 2025-07-01T11:22:00Z
+title: Memory mapped files in Go
+slug: memory-mapped-files-go
+featured: true
+draft: false 
+tags:
+  - mmap
+  - memory mapped file
+  - go
+  - binary protocol
+description: Simple memory mapped file examples in Go
+---
 # Memory Mapped Files & Binary Protocols
 
 ```
